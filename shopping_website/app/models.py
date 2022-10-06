@@ -7,6 +7,7 @@ STATE_CHOICES = (
     ('Andaman& Nicobar Islands', 'Andaman& Nicobar Islands'),
     ('Goa', 'Goa'),
     ('Karela', 'Karela'),
+    ('Bihar', 'Bihar'),
     ('Chandigarh', 'Chandigarh'),
     ('Madhya Pradesh', 'Madhya Pradesh'),
     ('West Bengal', 'West Bengal'),
