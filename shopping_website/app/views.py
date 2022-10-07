@@ -56,3 +56,8 @@ class ProfileView(View):
         return render(request, 'app/profile.html', {'form': form, 'active': 'btn-primary'})
 
 
+def address(request):
+    add = Customer.objects.filter(user=request.user)
+    return render(request, 'app/address.html', {'add': add, 'active': 'btn-primary'})
+
+
