@@ -4,15 +4,15 @@
 {% block content %}
 
 <div class="container">
-    <div class = 'row my-3'>
+    <div class = 'row mb-3'>
         <div class="col-sm-6 offset-sm-3">
             <h3>Login</h3>
             <hr>
             <form action=""method='post' novalidate class="shadow p-5">
                 {% csrf_token %}
                 {% for fm in form %}
-                <div class="form-group">
-                    {{ form.label_tag }} {{ fm }} <small class=text-danger">{{ fm.errors|striptags }}
+                <div class="form-group mb-3">
+                    {{ fm.label_tag }} {{ fm }} <small class=text-danger">{{ fm.errors|striptags }}
 
                 </small>
                 </div>

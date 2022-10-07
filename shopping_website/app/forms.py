@@ -3,6 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm, UsernameField
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.utils.translation import gettext as _
+from . models import Customer
 
 
 class LoginForm(AuthenticationForm):
@@ -18,8 +19,20 @@ class CustomerRegistrationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
-        labels={'email': 'Email'}
-        widgets={'username': forms.TextInput(attrs={'class': 'form-control'})}
+        labels = {'email': 'Email'}
+        widgets = {'username': forms.TextInput(attrs={'class': 'form-control'})}
+
+
+class CustomerProfileForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = ['name', 'locality', 'city', 'state', 'zipcode']
+        widgets = {'name': forms.TextInput(attrs={'class': 'form-control'}),
+                   'locality': forms.TextInput(attrs={'class': 'form-control'}),
+                   'city': forms.TextInput(attrs={'class': 'form-control'}),
+                   'state': forms.TextInput(attrs={'class': 'form-control'}),
+                   'zipcode': forms.TextInput(attrs={'class': 'form-control'}), }
+
 
 
 
