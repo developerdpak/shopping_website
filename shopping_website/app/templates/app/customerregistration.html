@@ -18,8 +18,12 @@
                 {% endfor %}
                 <input type="submit" class="btn btn-primary mt-4" value="Register">
                 <br>
+                <!--
                 <div class="text-center text-primary fw-bold"><small> Existing User
-                    <a href="{% url 'app:Login' %}" class="text-danger"> Login Now </a></small></div>
+                    <a href="{% url 'app:login' %}" class="text-danger"> Login Now </a></small>
+                </div>
+                -->
+
                 {% if form.non_fields_errors %}
                 {% for error in form.non_field_errors %}
                 <p class="alert alert-danger mb-3"> {{ error }}</p>
